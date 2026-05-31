@@ -8,13 +8,21 @@ Eine native **macOS-Menüleisten-App zur Zeiterfassung** – internes Team-Tool.
 
 ## Installation
 
-1. Unter **[Releases](../../releases/latest)** die neueste `Muninn-<version>.zip` herunterladen.
-2. ZIP entpacken und **`Muninn.app`** in den Ordner **`~/Applications`** ziehen
+1. Unter **[Releases](../../releases/latest)** die neueste `Muninn-<version>.zip` herunterladen und entpacken.
+2. **`Muninn.app`** in den Ordner **`~/Applications`** ziehen
    (der persönliche Programme-Ordner in deinem Benutzerverzeichnis).
-3. **Erster Start:** Rechtsklick auf `Muninn.app` → **„Öffnen"** → im Dialog
-   erneut **„Öffnen"**. Das ist einmalig nötig, weil die App ohne
-   kostenpflichtiges Apple-Entwicklerkonto signiert ist. Danach startet sie
-   ganz normal per Doppelklick.
+3. **Einmalig** im Terminal die Download-Markierung entfernen – sonst blockt
+   macOS die App („Apple konnte nicht überprüfen …"):
+   ```bash
+   xattr -dr com.apple.quarantine ~/Applications/Muninn.app
+   ```
+   (Kein Admin-Recht nötig.)
+4. **`Muninn.app`** per Doppelklick öffnen.
+
+> Hintergrund: Die App ist ohne kostenpflichtiges Apple-Entwicklerkonto
+> signiert. Der Terminal-Schritt ist nur beim **ersten** Mal nötig – alle
+> künftigen Updates installiert Muninn selbst (und entfernt die Markierung
+> dabei automatisch).
 
 ## Updates
 
