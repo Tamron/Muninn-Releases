@@ -1,53 +1,87 @@
+<div align="center">
+
 # 🐦‍⬛ Muninn
 
-Native macOS-Menüleisten-App zur Zeiterfassung für IT-Dienstleister. Muninn
-erfasst Arbeitszeiten pro Kunde, wertet den Monatsumsatz inklusive Zuschlägen aus
-und überträgt die Zeiten auf Wunsch automatisiert in ein Web-Abrechnungsportal.
-Sämtliche Daten bleiben lokal; eine Sicherung nach OneDrive ist optional.
+### Zeiterfassung, die in deiner Menüleiste lebt
+
+Native macOS-Menüleisten-App für IT-Dienstleister: Arbeitszeiten pro Kunde
+erfassen, Monatsumsatz inklusive Zuschlägen auswerten und die Zeiten auf Wunsch
+automatisiert ins Web-Abrechnungsportal übertragen – **klassische Projekte und
+DLV (Dienstleistungsverträge / Professional Service)**.
+
+[![Version](https://img.shields.io/badge/Version-2.0.0-60A5FA?style=for-the-badge)](../../releases/latest)
+[![Download](https://img.shields.io/badge/Download-Muninn.zip-32CE6A?style=for-the-badge)](../../releases/latest)
+[![macOS](https://img.shields.io/badge/macOS-14%2B-A1A1AA?style=for-the-badge&logo=apple)](../../releases/latest)
+
+</div>
+
+---
+
+Muninn erfasst Arbeitszeiten pro Kunde, wertet den Monatsumsatz inklusive
+Zuschlägen aus und überträgt die Zeiten auf Wunsch automatisiert ins
+Web-Abrechnungsportal. **Sämtliche Daten bleiben lokal** – kein Konto, kein
+Cloud-Zwang, kein Tracking; ein Backup nach OneDrive ist optional.
 
 Dieses Repository stellt die fertigen App-Versionen zum Download bereit. Der
 Quellcode liegt in einem separaten, privaten Repository.
 
-## Funktionen
+> **Neu in 2.0.0:** Zweite Abrechnungsform **DLV** (Dienstleistungsverträge /
+> Professional Service) – pro Kunde aktivierbar, vollständig in den bestehenden
+> Ein-Klick-Ablauf integriert.
 
-### Erfassung
-- Zeiteinträge mit Kunde, Datum, Start- und Endzeit, Pause, Einsatzort (vor Ort
-  oder remote) und Beschreibung.
-- Uhrzeiten werden beim Tippen automatisch formatiert und gegen ein
-  15-Minuten-Raster geprüft; Pausenangaben akzeptieren Komma und Punkt.
-- Wiederkehrende Beschreibungen lassen sich als Vorlagen ablegen und mit einem
-  Klick einfügen.
-- Erfasste Einträge sind nachträglich editier- und löschbar, gruppiert nach
-  Kunde und Skill-Level.
+---
 
-### Kunden und Stundensätze
-- Beliebig viele Kunden, jeder mit eigenen Stundensätzen je Skill-Level
+## ✨ Funktionen
+
+### ⏱️ Erfassung
+- **Schnelle Zeiteinträge** mit Kunde, Datum, Start/Ende, Pause, Einsatzort
+  (vor Ort oder remote) und Beschreibung.
+- **Anfahrt bei „Vor Ort“** – zusätzliche Felder für Kilometer und Anfahrtszeit.
+- **Auto-Format & Validierung** – Uhrzeiten werden beim Tippen formatiert und
+  gegen ein 15-Minuten-Raster geprüft; Pausen akzeptieren Komma und Punkt.
+- **Tätigkeits-Vorlagen** – wiederkehrende Beschreibungen per Klick einfügen.
+- **Bearbeiten & löschen** – erfasste Einträge nachträglich ändern, gruppiert
+  nach Kunde und Skill-Level.
+
+### 🗂️ Kunden, Skill-Level & DLV
+- Beliebig viele Kunden mit **eigenen Stundensätzen je Skill-Level**
   (System Engineer, Consultant, IT Business Architect).
-- Das zuletzt genutzte Skill-Level wird pro Kunde gemerkt.
+- **DLV pro Kunde aktivierbar** – ein Schalter im Kunden-Dialog schaltet die
+  Abrechnungsform **DLV (Dienstleistungsverträge / Professional Service)** frei,
+  inklusive eigenem Stundensatz für *DLV · System Engineer*.
+- **Optionale Auftragsnummer + Alias** – unterscheidet gleichnamige Kunden.
+- Das **zuletzt genutzte Skill-Level** wird pro Kunde gemerkt.
 
-### Auswertung und Umsatz
-- Der laufende Monatsumsatz ist im Kopfbereich stets sichtbar.
-- Eine Detailansicht schlüsselt den Umsatz pro Kunde und Skill-Level auf und ist
-  über alle Monate navigierbar.
-- Zuschläge werden minutengenau ermittelt: Spätarbeit (+25 %), Nacht (+50 %),
-  Samstag (+50 % / +75 %), Sonntag (+100 %) und gesetzliche Feiertage (+125 %).
-- Der Abrechnungsmonat ist vom Arbeitsdatum entkoppelt; Zeiten lassen sich so
-  frei einem Monat zuordnen.
+### 📊 Auswertung & Umsatz
+- **Laufender Monatsumsatz** stets im Kopfbereich sichtbar.
+- **Detailansicht** pro Kunde und Skill-Level, über alle Monate navigierbar.
+- **Zuschläge minutengenau:** Spät (+25 %), Nacht (+50 %), Samstag (+50 %/+75 %),
+  Sonntag (+100 %), gesetzliche Feiertage (+125 %).
+- **Abrechnungsmonat entkoppelt vom Arbeitsdatum** – Zeiten frei einem Monat
+  zuordnen.
+- **Farb-Markierung** nach dem Abrechnen: grün = eingetragen, blau = erledigt.
 
-### Abrechnung
-- Übertragung der erfassten Zeiten in ein Web-Abrechnungsportal per
-  Browser-Automation – wahlweise nur eintragen oder eintragen und abschließen.
-- Bereits vorhandene Einträge werden anhand von Datum und Startzeit erkannt und
-  nicht doppelt angelegt.
+### 🤖 Abrechnung (automatisiert)
+- **Ein Klick** überträgt die erfassten Zeiten per Browser-Automation ins
+  Web-Abrechnungsportal – wahlweise nur eintragen oder eintragen und abschließen.
+- **Zwei Abrechnungsformen:** klassische **Projekte** *und* **DLV**. Die App
+  wählt anhand des Skill-Levels automatisch den passenden Ablauf – beide laufen
+  im selben Abrechnungs-Fenster.
+- **Ein Fenster für alles** – einmal anmelden, beliebig viele Kunden abrechnen;
+  keine gespeicherten Zugangsdaten.
+- **Mehrere auf einmal** – mehrere Kunden/Skills gemeinsam abrechnen.
+- **Keine Dubletten** – bereits vorhandene Einträge werden erkannt und
+  übersprungen.
 
-### Daten, Backup und Updates
-- Alle Daten liegen lokal als JSON (Kunden, Vorlagen) und CSV (Zeiten) in einem
-  frei wählbaren Ordner – ohne Konto, Cloud-Zwang oder Tracking.
-- Ein optionales Backup nach OneDrive sichert Kunden, Vorlagen und Zeit-CSVs
-  automatisch bei jeder Änderung.
-- Neue Versionen installiert ein integrierter Updater direkt aus der App.
+### ☁️ Daten, Backup & Updates
+- Alle Daten lokal als JSON (Kunden, Vorlagen) und CSV (Zeiten) in einem frei
+  wählbaren Ordner.
+- Optionales **OneDrive-Backup** – sichert automatisch bei jeder Änderung.
+- **Integrierter Updater** – neue Versionen direkt aus der App installieren.
 
-## Installation
+---
+
+## 🚀 Installation
 
 1. Aktuelle `Muninn-<version>.zip` aus den [Releases](../../releases/latest)
    herunterladen und entpacken.
@@ -58,19 +92,18 @@ Quellcode liegt in einem separaten, privaten Repository.
    ```
 4. Muninn per Doppelklick öffnen.
 
-Schritt 3 ist erforderlich, weil die App ohne kostenpflichtiges
-Apple-Entwicklerkonto signiert ist und macOS sie sonst beim ersten Start
-blockiert. Bei späteren Versionen entfällt er, da der integrierte Updater die
-Markierung selbst entfernt.
+Schritt 3 ist nötig, weil die App ohne kostenpflichtiges Apple-Entwicklerkonto
+signiert ist und macOS sie sonst beim ersten Start blockiert. Bei späteren
+Versionen entfällt er – der integrierte Updater entfernt die Markierung selbst.
 
-## Erster Start
+## 👋 Erster Start
 
 Beim ersten Start ist Muninn leer und legt seinen Datenordner unter
 `~/Desktop/DLNs` an (in den Einstellungen änderbar). Über das Kunden-Dropdown
-werden Kunden mit ihren Stundensätzen angelegt; anschließend lassen sich Zeiten
-erfassen.
+werden Kunden mit ihren Stundensätzen angelegt – bei Bedarf inklusive
+DLV-Vertrag –, anschließend lassen sich Zeiten erfassen.
 
-## Abrechnung einrichten (optional)
+## ⚙️ Abrechnung einrichten (optional)
 
 Die automatische Übertragung setzt Python 3, das Paket `selenium` und Google
 Chrome voraus. Die Zeiterfassung selbst funktioniert unabhängig davon.
@@ -82,12 +115,18 @@ Chrome voraus. Die Zeiterfassung selbst funktioniert unabhängig davon.
    python3 -m pip install selenium
    ```
 3. Google Chrome installieren.
-4. In den Einstellungen unter „Abrechnung“ den Python-Pfad prüfen
-   (Standard `/usr/bin/python3`).
+4. In den Einstellungen unter „Abrechnung“ den **Python-Pfad** auf das Python
+   mit `selenium` setzen.
 
 Die benötigten Automations-Skripte sind in der App enthalten.
 
-## Systemvoraussetzungen
+## 🖥️ Systemvoraussetzungen
 
 - macOS 14 (Sonoma) oder neuer
 - Für die automatische Übertragung zusätzlich: Python 3, `selenium`, Google Chrome
+
+---
+
+<div align="center">
+<sub>🐦‍⬛ Muninn – benannt nach Odins Raben für das Gedächtnis.</sub>
+</div>
