@@ -25,10 +25,6 @@ Cloud-Zwang, kein Tracking; ein Backup nach OneDrive ist optional.
 Dieses Repository stellt die fertigen App-Versionen zum Download bereit. Der
 Quellcode liegt in einem separaten, privaten Repository.
 
-> **Neu in 2.0.0:** Zweite Abrechnungsform **DLV** (Dienstleistungsverträge /
-> Professional Service) – pro Kunde aktivierbar, vollständig in den bestehenden
-> Ein-Klick-Ablauf integriert.
-
 ---
 
 ## ✨ Funktionen
@@ -36,12 +32,23 @@ Quellcode liegt in einem separaten, privaten Repository.
 ### ⏱️ Erfassung
 - **Schnelle Zeiteinträge** mit Kunde, Datum, Start/Ende, Pause, Einsatzort
   (vor Ort oder remote) und Beschreibung.
-- **Anfahrt bei „Vor Ort“** – zusätzliche Felder für Kilometer und Anfahrtszeit.
+- **Eingebaute Stoppuhr** – Timer direkt im Kopfbereich starten und stoppen; die
+  gestoppte Dauer wird auf die nächste Viertelstunde aufgerundet und als
+  Start/Ende übernommen, „Verwerfen" verwirft die Aufzeichnung wieder.
+- **Eintrag duplizieren** – einen bestehenden Eintrag als Vorlage ins Formular
+  übernehmen.
+- **Überlappungs-Warnung** – überschneidet sich die Zeit mit einem bestehenden
+  Eintrag desselben Tages, weist ein dezenter Hinweis darauf hin.
+- **Live-Vorschau der Zuschläge** – schon beim Tippen Summe aus Stunden und
+  Betrag, auf Wunsch aufgeschlüsselt nach Zuschlagszone.
+- **Anfahrt bei „Vor Ort"** – zusätzliche Felder für Kilometer und Anfahrtszeit.
 - **Auto-Format & Validierung** – Uhrzeiten werden beim Tippen formatiert und
   gegen ein 15-Minuten-Raster geprüft; Pausen akzeptieren Komma und Punkt.
 - **Tätigkeits-Vorlagen** – wiederkehrende Beschreibungen per Klick einfügen.
 - **Bearbeiten & löschen** – erfasste Einträge nachträglich ändern, gruppiert
   nach Kunde und Skill-Level.
+- **Volltextsuche** – Beschreibungen über alle Monate des laufenden Jahres
+  durchsuchen.
 
 ### 🗂️ Kunden, Skill-Level & DLV
 - Beliebig viele Kunden mit **eigenen Stundensätzen je Skill-Level**
@@ -55,11 +62,17 @@ Quellcode liegt in einem separaten, privaten Repository.
 ### 📊 Auswertung & Umsatz
 - **Laufender Monatsumsatz** stets im Kopfbereich sichtbar.
 - **Detailansicht** pro Kunde und Skill-Level, über alle Monate navigierbar.
+- **Jahres-Diagramm** – Umsatz oder Stunden über zwölf Monate auf einen Blick.
+- **Monatsabschluss-Übersicht** – Status je Kunde und Skill (offen, eingetragen,
+  erledigt), Plausibilitätsprüfung (fehlende Werktage, auffällig lange Tage) und
+  Vergleich von Stunden und Umsatz zum Vormonat.
 - **Zuschläge minutengenau:** Spät (+25 %), Nacht (+50 %), Samstag (+50 %/+75 %),
   Sonntag (+100 %), gesetzliche Feiertage (+125 %).
 - **Abrechnungsmonat entkoppelt vom Arbeitsdatum** – Zeiten frei einem Monat
   zuordnen.
 - **Farb-Markierung** nach dem Abrechnen: grün = eingetragen, blau = erledigt.
+- **Vormonat-Erinnerung** – sind im Vormonat noch Kunden offen, weist ein
+  schließbares Banner darauf hin.
 
 ### 🤖 Abrechnung (automatisiert)
 - **Ein Klick** überträgt die erfassten Zeiten per Browser-Automation ins
@@ -72,6 +85,12 @@ Quellcode liegt in einem separaten, privaten Repository.
 - **Mehrere auf einmal** – mehrere Kunden/Skills gemeinsam abrechnen.
 - **Keine Dubletten** – bereits vorhandene Einträge werden erkannt und
   übersprungen.
+
+### 🖥️ Oberfläche & Bedienung
+- **Hell- und Dunkel-Modus** – per Schalter in den Einstellungen umschaltbar.
+- **Globaler Hotkey** – öffnet Muninn aus jeder App direkt im Erfassungsformular;
+  Tastenkombination frei wählbar.
+- **Popover anheften** – das Fenster bleibt beim Klick außerhalb geöffnet.
 
 ### ☁️ Daten, Backup & Updates
 - Alle Daten lokal als JSON (Kunden, Vorlagen) und CSV (Zeiten) in einem frei
@@ -115,7 +134,7 @@ Chrome voraus. Die Zeiterfassung selbst funktioniert unabhängig davon.
    python3 -m pip install selenium
    ```
 3. Google Chrome installieren.
-4. In den Einstellungen unter „Abrechnung“ den **Python-Pfad** auf das Python
+4. In den Einstellungen unter „Abrechnung" den **Python-Pfad** auf das Python
    mit `selenium` setzen.
 
 Die benötigten Automations-Skripte sind in der App enthalten.
