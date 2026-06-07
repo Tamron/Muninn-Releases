@@ -2,25 +2,15 @@
 
 # 🐦‍⬛ Muninn
 
-### Zeiterfassung, die in deiner Menüleiste lebt
-
-Native macOS-Menüleisten-App für IT-Dienstleister: Arbeitszeiten pro Kunde
-erfassen, Monatsumsatz inklusive Zuschlägen auswerten und die Zeiten auf Wunsch
-automatisiert ins Web-Abrechnungsportal übertragen – **klassische Projekte und
-DLV (Dienstleistungsverträge / Professional Service)**.
-
-[![Version](https://img.shields.io/badge/Version-2.0.0-60A5FA?style=for-the-badge)](../../releases/latest)
-[![Download](https://img.shields.io/badge/Download-Muninn.zip-32CE6A?style=for-the-badge)](../../releases/latest)
-[![macOS](https://img.shields.io/badge/macOS-14%2B-A1A1AA?style=for-the-badge&logo=apple)](../../releases/latest)
+### Zeiterfassung direkt in der Menüleiste
 
 </div>
 
 ---
 
 Muninn erfasst Arbeitszeiten pro Kunde, wertet den Monatsumsatz inklusive
-Zuschlägen aus und überträgt die Zeiten auf Wunsch automatisiert ins
-Web-Abrechnungsportal. **Sämtliche Daten bleiben lokal** – kein Konto, kein
-Cloud-Zwang, kein Tracking; ein Backup nach OneDrive ist optional.
+Zuschlägen aus und überträgt die Zeiten auf Knopfdruck automatisiert ins
+Web-Abrechnungsportal. **Sämtliche Daten bleiben lokal außerhalb der App** 
 
 Dieses Repository stellt die fertigen App-Versionen zum Download bereit. Der
 Quellcode liegt in einem separaten, privaten Repository.
@@ -54,9 +44,9 @@ Quellcode liegt in einem separaten, privaten Repository.
 - Beliebig viele Kunden mit **eigenen Stundensätzen je Skill-Level**
   (System Engineer, Consultant, IT Business Architect).
 - **DLV pro Kunde aktivierbar** – ein Schalter im Kunden-Dialog schaltet die
-  Abrechnungsform **DLV (Dienstleistungsverträge / Professional Service)** frei,
+  Abrechnungsform **DLV** frei,
   inklusive eigenem Stundensatz für *DLV · System Engineer*.
-- **Optionale Auftragsnummer + Alias** – unterscheidet gleichnamige Kunden.
+- **Optionale Auftragsnummer + Alias** – unterscheidet gleichnamige Kunden in unterschiedlichen Projekten.
 - Das **zuletzt genutzte Skill-Level** wird pro Kunde gemerkt.
 
 ### 📊 Auswertung & Umsatz
@@ -66,7 +56,7 @@ Quellcode liegt in einem separaten, privaten Repository.
 - **Monatsabschluss-Übersicht** – Status je Kunde und Skill (offen, eingetragen,
   erledigt), Plausibilitätsprüfung (fehlende Werktage, auffällig lange Tage) und
   Vergleich von Stunden und Umsatz zum Vormonat.
-- **Zuschläge minutengenau:** Spät (+25 %), Nacht (+50 %), Samstag (+50 %/+75 %),
+- **Zuschläge:** Spät (+25 %), Nacht (+50 %), Samstag (+50 %/+75 %),
   Sonntag (+100 %), gesetzliche Feiertage (+125 %).
 - **Abrechnungsmonat entkoppelt vom Arbeitsdatum** – Zeiten frei einem Monat
   zuordnen.
@@ -82,7 +72,6 @@ Quellcode liegt in einem separaten, privaten Repository.
   im selben Abrechnungs-Fenster.
 - **Ein Fenster für alles** – einmal anmelden, beliebig viele Kunden abrechnen;
   keine gespeicherten Zugangsdaten.
-- **Mehrere auf einmal** – mehrere Kunden/Skills gemeinsam abrechnen.
 - **Keine Dubletten** – bereits vorhandene Einträge werden erkannt und
   übersprungen.
 
@@ -119,8 +108,7 @@ Versionen entfällt er – der integrierte Updater entfernt die Markierung selbs
 
 Beim ersten Start ist Muninn leer und legt seinen Datenordner unter
 `~/Desktop/DLNs` an (in den Einstellungen änderbar). Über das Kunden-Dropdown
-werden Kunden mit ihren Stundensätzen angelegt – bei Bedarf inklusive
-DLV-Vertrag –, anschließend lassen sich Zeiten erfassen.
+werden Kunden mit ihren Stundensätzen angelegt, anschließend lassen sich Zeiten erfassen.
 
 ## ⚙️ Abrechnung einrichten (optional)
 
