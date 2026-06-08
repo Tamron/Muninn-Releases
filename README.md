@@ -98,8 +98,14 @@ Quellcode liegt in einem separaten, privaten Repository.
    ```bash
    xattr -dr com.apple.quarantine ~/Applications/Muninn.app
    ```
-4. Muninn per Terminal ```open ~/Applications/Muninn.app ```öffnen.
-
+   ggf. ist es ohne ~
+    ```bash
+   xattr -dr com.apple.quarantine /Applications/Muninn.app
+   ```
+5. Muninn per Terminal ```open ~/Applications/Muninn.app```öffnen.
+   genauso auch hier ggf.
+   ```open /Applications/Muninn.app```
+   
 Schritt 3 und 4 sind nötig, weil die App ohne kostenpflichtiges Apple-Entwicklerkonto
 signiert ist und macOS sie sonst beim ersten Start blockiert. Bei späteren
 Versionen entfällt er – der integrierte Updater entfernt die Markierung selbst.
