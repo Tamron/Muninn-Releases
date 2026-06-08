@@ -100,7 +100,7 @@ Quellcode liegt in einem separaten, privaten Repository.
    ```
 4. Muninn per Terminal ```open ~/Applications/Muninn.app ```öffnen.
 
-Schritt 3 ist nötig, weil die App ohne kostenpflichtiges Apple-Entwicklerkonto
+Schritt 3 und 4 sind nötig, weil die App ohne kostenpflichtiges Apple-Entwicklerkonto
 signiert ist und macOS sie sonst beim ersten Start blockiert. Bei späteren
 Versionen entfällt er – der integrierte Updater entfernt die Markierung selbst.
 
